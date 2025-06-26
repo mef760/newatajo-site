@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newAtajo | Agiliza tus compras y cotizaciones con IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b46c1 0%, #3b82f6 100%);
+        }
+        .hero-clip-path {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .input-focus:focus {
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navbar -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl mr-3">NA</div>
+                    <span class="text-xl font-bold text-gray-800">new<span class="text-indigo-600">Atajo</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-indigo-600 transition">Funcionalidades</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 transition">Cómo funciona</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 transition">Casos de éxito</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition">Planes</a>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="#contact" class="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Demo Gratis</a>
+                </div>
+                <button class="md:hidden text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-clip-path gradient-bg pt-32 pb-20 md:pb-32">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Transforma tu proceso de compras con inteligencia artificial</h1>
+                <p class="text-xl text-indigo-100 mb-8">Automatiza cotizaciones, compara proveedores y optimiza tus compras empresariales con nuestra plataforma impulsada por IA.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold text-center hover:bg-gray-100 transition">Solicitar Demo</a>
+                    <a href="#how-it-works" class="px-8 py-4 border-2 border-white text-white rounded-full font-semibold text-center hover:bg-white hover:bg-opacity-10 transition">Ver cómo funciona</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-indigo-400 rounded-full opacity-20"></div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-400 rounded-full opacity-20"></div>
+                    <div class="relative bg-white rounded-xl shadow-2xl overflow-hidden floating">
+                        <div class="p-4 bg-gray-50 border-b flex items-center">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="ml-4 text-sm text-gray-500">newAtajo Dashboard</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-sm font-medium text-gray-700">Cotización Automatizada</div>
+                                <div class="text-xs px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full">IA Activa</div>
+                            </div>
+                            <div class="h-48 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-indigo-600 text-3xl font-bold mb-2">-68%</div>
+                                    <div class="text-gray-600 text-sm">de tiempo en procesos de compra</div>
+                                </div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-3 gap-2">
+                                <div class="bg-indigo-50 p-2 rounded text-center">
+                                    <div class="text-indigo-600 font-bold">3.2x</div>
+                                    <div class="text-xs text-gray-500">Más eficiente</div>
+                                </div>
+                                <div class="bg-purple-50 p-2 rounded text-center">
+                                    <div class="text-purple-600 font-bold">15</div>
+                                    <div class="text-xs text-gray-500">Proveedores</div>
+                                </div>
+                                <div class="bg-blue-50 p-2 rounded text-center">
+                                    <div class="text-blue-600 font-bold">$24k</div>
+                                    <div class="text-xs text-gray-500">Ahorro anual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-gray-500 mb-8">Confían en nosotros</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                <img src="https://via.placeholder.com/120x40?text=Empresa+1" alt="Logo empresa 1" class="h-8 md:h-10">
+                <img src="https://via.placeholder.com/120x40?text=Empresa+2" alt="Logo empresa 2" class="h-8 md:h-10">
+                <img src="https://via.placeholder.com/120x40?text=Empresa+3" alt="Logo empresa 3" class="h-8 md:h-10">
+                <img src="https://via.placeholder.com/120x40?text=Empresa+4" alt="Logo empresa 4" class="h-8 md:h-10">
+                <img src="https://via.placeholder.com/120x40?text=Empresa+5" alt="Logo empresa 5" class="h-8 md:h-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Potencia tu departamento de compras</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Automatizaciones inteligentes que transforman tus procesos de adquisición y cotización</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 feature-card transition duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Automatización de Cotizaciones</h3>
+                    <p class="text-gray-600">Envía solicitudes a múltiples proveedores simultáneamente y recibe respuestas en tiempo récord.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 feature-card transition duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Comparación Inteligente</h3>
+                    <p class="text-gray-600">Nuestra IA analiza todas las cotizaciones y te recomienda la mejor opción basada en precio, calidad y historial.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 feature-card transition duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dashboard Analítico</h3>
+                    <p class="text-gray-600">Visualiza métricas clave, ahorros potenciales y el desempeño de tus proveedores en un solo lugar.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 feature-card transition duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-file-invoice-dollar text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Integración Contable</h3>
+                    <p class="text-gray-600">Conecta directamente con tus sistemas ERP para un flujo de trabajo sin fisuras desde cotización a pago.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 feature-card transition duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cumplimiento Normativo</h3>
+                    <p class="text-gray-600">Automatiza el cumplimiento de políticas de compra y regulaciones para evitar riesgos y multas.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 feature-card transition duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-comments-dollar text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Negociación Asistida</h3>
+                    <p class="text-gray-600">Sugerencias en tiempo real para negociar mejores términos basadas en datos históricos y de mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Cómo funciona newAtajo</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Simplificamos los procesos complejos en solo 3 pasos</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <div class="relative">
+                        <div class="absolute -top-8 -left-8 w-32 h-32 bg-indigo-100 rounded-full opacity-50"></div>
+                        <div class="relative bg-white rounded-xl shadow-lg p-8">
+                            <div class="flex mb-6">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full gradient-bg text-white font-bold text-xl">1</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-bold text-gray-800">Configura tu solicitud</h3>
+                                    <p class="text-gray-600 mt-1">Define los productos o servicios que necesitas, cantidades y especificaciones técnicas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex mb-6">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full gradient-bg text-white font-bold text-xl">2</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-bold text-gray-800">Selecciona proveedores</h3>
+                                    <p class="text-gray-600 mt-1">Elige de tu base de datos o permite que nuestra IA sugiera nuevos proveedores calificados.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full gradient-bg text-white font-bold text-xl">3</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-bold text-gray-800">Recibe y compara</h3>
+                                    <p class="text-gray-600 mt-1">Obtén cotizaciones estandarizadas y nuestra recomendación inteligente en horas, no días.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative max-w-md">
+                        <img src="https://via.placeholder.com/500x400?text=Demo+newAtajo" alt="Demo newAtajo" class="rounded-xl shadow-xl floating">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-check text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <div class="font-bold text-gray-800">+85%</div>
+                                    <div class="text-sm text-gray-600">Eficiencia</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Lo que dicen nuestros clientes</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Empresas que han transformado su departamento de compras</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://via.placeholder.com/100?text=CE" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Carlos Espinoza</h4>
+                            <p class="text-sm text-gray-600">Director de Compras, Industrias Alfa</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Con newAtajo hemos reducido nuestro tiempo de cotización en un 75%. Lo que antes tomaba 2 semanas ahora se resuelve en 3 días. La IA de recomendación nos ha ayudado a descubrir proveedores que no conocíamos y ahorrar un 15% en costos."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://via.placeholder.com/100?text=MG" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">María González</h4>
+                            <p class="text-sm text-gray-600">Gerente de Adquisiciones, Retail Corp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"La automatización de procesos nos ha permitido manejar un volumen 3 veces mayor sin aumentar el personal. El dashboard analítico es increíble para tomar decisiones estratégicas. Implementamos newAtajo en toda la empresa después de ver los resultados en compras."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://via.placeholder.com/100?text=JP" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Juan Pérez</h4>
+                            <p class="text-sm text-gray-600">CPO, Servicios Omega</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Como empresa de servicios, gestionamos cientos de proveedores. newAtajo no solo nos ahorra tiempo, sino que ha mejorado nuestra calidad de servicio al garantizar que siempre trabajamos con los mejores proveedores al mejor precio. La integración con nuestro ERP fue impecable."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contact" class="px-8 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition">Únete a ellos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Planes a medida</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Elige el plan que mejor se adapte a las necesidades de tu empresa</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plan Básico -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Básico</h3>
+                        <p class="text-gray-600 mb-6">Perfecto para PYMES que inician su transformación digital</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-800">$299</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Hasta 50 solicitudes/mes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Comparación de hasta 5 proveedores</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Dashboard básico</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Soporte por correo electrónico</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gray-100 text-gray-800 font-semibold rounded-lg hover:bg-gray-200 transition">Empezar</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Profesional (Destacado) -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform scale-105 z-10 border-2 border-indigo-500">
+                    <div class="bg-indigo-500 text-white text-center py-2">
+                        <span class="font-semibold">Más popular</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Profesional</h3>
+                        <p class="text-gray-600 mb-6">Para empresas con mayor volumen de compras</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-800">$799</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Hasta 200 solicitudes/mes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Comparación de hasta 15 proveedores</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Dashboard avanzado con analíticas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Integración con 1 sistema ERP</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Soporte prioritario</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Negociación asistida por IA</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-6 text-center gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition">Prueba gratis 14 días</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Empresa -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Empresa</h3>
+                        <p class="text-gray-600 mb-6">Solución completa para grandes corporaciones</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-800">Personalizado</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Solicitudes ilimitadas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Comparación de proveedores ilimitada</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Dashboard ejecutivo personalizado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Múltiples integraciones ERP</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Soporte 24/7 con gestor dedicado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Entrenamiento personalizado</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gray-100 text-gray-800 font-semibold rounded-lg hover:bg-gray-200 transition">Contactar ventas</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-gray-600">
+                <p>¿Necesitas algo diferente? <a href="#contact" class="text-indigo-600 hover:underline">Hablemos</a> sobre una solución personalizada para tu empresa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Lead Capture Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">¿Listo para transformar tus compras?</h2>
+                    <p class="text-xl text-gray-600 mb-8">Solicita una demostración personalizada y descubre cómo newAtajo puede optimizar tus procesos de adquisición.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full gradient-bg text-white">
+                                    <i class="fas fa-calendar-check text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-800">Demo personalizada</h4>
+                                <p class="text-gray-600">30 minutos para mostrarte el potencial de la plataforma con datos reales.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full gradient-bg text-white">
+                                    <i class="fas fa-chart-pie text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-800">Análisis de ahorro</h4>
+                                <p class="text-gray-600">Te mostraremos estimaciones de ahorro potencial específicas para tu empresa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full gradient-bg text-white">
+                                    <i class="fas fa-headset text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-800">Soporte experto</h4>
+                                <p class="text-gray-600">Nuestros especialistas resolverán todas tus dudas durante y después de la demo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Agenda tu demo gratuita</h3>
+                        
+                        <form id="leadForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
+                                <input type="text" id="company" name="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            
+                            <div>
+                                <label for="employees" class="block text-sm font-medium text-gray-700 mb-1">Número de empleados</label>
+                                <select id="employees" name="employees" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500 transition">
+                                    <option value="1-10">1-10</option>
+                                    <option value="11-50">11-50</option>
+                                    <option value="51-200">51-200</option>
+                                    <option value="201-500">201-500</option>
+                                    <option value="500+">500+</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">¿Qué desafíos enfrentas en tus procesos de compras?</label>
+                                <textarea id="message" name="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500 transition"></textarea>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="agree" name="agree" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                                <label for="agree" class="ml-2 block text-sm text-gray-700">
+                                    Acepto recibir información sobre newAtajo y acepto la <a href="#" class="text-indigo-600 hover:underline">Política de Privacidad</a>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-4 px-6 gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition flex items-center justify-center">
+                                <span>Enviar solicitud</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </form>
+                        
+                        <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-lg">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="font-medium">¡Gracias por tu interés!</p>
+                                    <p class="mt-1">Nos pondremos en contacto contigo en menos de 24 horas para coordinar la demostración.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Preguntas frecuentes</h2>
+                <p class="text-xl text-gray-600">Resuelve tus dudas sobre newAtajo</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800">¿Cómo garantizan la calidad de los proveedores recomendados?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Nuestro sistema de IA analiza múltiples factores incluyendo historial de cumplimiento, puntuaciones de otros clientes, certificaciones y desempeño en entregas anteriores. Además, puedes configurar tus propios criterios de calidad y nuestros algoritmos priorizarán proveedores que los cumplan.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800">¿Qué sistemas ERP pueden integrarse?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Actualmente tenemos integraciones nativas con SAP, Oracle Netsuite, Microsoft Dynamics y QuickBooks. Para otros sistemas ERP, ofrecemos una API robusta que permite conexión personalizada. Nuestro equipo de implementación puede ayudarte a configurar la integración sin importar qué sistema uses.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800">¿Cómo manejan la seguridad de los datos?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Utilizamos cifrado AES-256 tanto para datos en tránsito como en reposo. Nuestros servidores están alojados en centros de datos certificados ISO 27001 en la UE y cumplimos con GDPR. Ofrecemos opciones de implementación on-premise para clientes con requerimientos de seguridad estrictos.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800">¿Qué tipo de capacitación incluye?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Todos los planes incluyen acceso a nuestra academia online con videotutoriales, guías paso a paso y webinars semanales. Los planes Profesional y Empresa incluyen sesiones de capacitación personalizadas. Además, ofrecemos certificación para usuarios avanzados que quieran aprovechar al máximo todas las funcionalidades.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800">¿Puedo probar el sistema antes de comprometerme?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">¡Por supuesto! Ofrecemos una prueba gratuita de 14 días para el plan Profesional donde podrás probar todas las funcionalidades con datos reales. Para planes personalizados, organizamos demostraciones con casos de uso específicos para tu industria. No requerimos tarjeta de crédito para iniciar la prueba.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600">¿No encontraste tu respuesta? <a href="#" class="text-indigo-600 hover:underline">Contáctanos</a> y resolveremos tus dudas personalmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">¿Listo para optimizar tus procesos de compras?</h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Empieza a ahorrar tiempo y dinero hoy mismo con newAtajo</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold hover:bg-gray-100 transition">Solicitar Demo</a>
+                <a href="tel:+34987654321" class="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">
+                    <i class="fas fa-phone-alt mr-2"></i> Llámanos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl mr-3">NA</div>
+                        <span class="text-xl font-bold">new<span class="text-indigo-400">Atajo</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">La plataforma de gestión de compras impulsada por IA que tu empresa necesita.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Producto</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Funcionalidades</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Planes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Demo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Actualizaciones</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Empresa</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Seguridad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 newAtajo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqContent = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                faqContent.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Form Submission
+        const leadForm = document.getElementById('leadForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        if (leadForm) {
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    leadForm.reset();
+                    successMessage.classList.remove('hidden');
+                    leadForm.classList.add('hidden');
+                    
+                    // Scroll to show success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1000);
+            });
+        }
+        
+        // Mobile Menu Toggle (placeholder functionality)
+        document.querySelector('header button').addEventListener('click', function() {
+            alert('Menú móvil se abriría aquí en una implementación completa');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update URL without jumping
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        window.location.hash = targetId;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
