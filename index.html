@@ -32,6 +32,48 @@
         .floating {
             animation: float 6s ease-in-out infinite;
         }
+        /* Slider progreso personalizado */
+        input[type="range"] {
+          appearance: none;
+          width: 100%;
+          height: 0.75rem;
+          border-radius: 9999px;
+          background: linear-gradient(to right, #6366f1 var(--value, 0%), #e5e7eb var(--value, 0%));
+          cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+          appearance: none;
+          height: 1.25rem;
+          width: 1.25rem;
+          background-color: #6366f1;
+          border-radius: 9999px;
+          border: none;
+        }
+        input[type="range"]::-moz-range-thumb {
+          height: 1.25rem;
+          width: 1.25rem;
+          background-color: #6366f1;
+          border-radius: 9999px;
+          border: none;
+        }
+        input[type="range"]:focus {
+          outline: none;
+        }
+        /* Para Firefox */
+        input[type="range"]::-moz-range-track {
+          height: 0.75rem;
+          border-radius: 9999px;
+          background: transparent;
+        }
+        /* Para IE */
+        input[type="range"]::-ms-fill-lower {
+          background: #6366f1;
+          border-radius: 9999px;
+        }
+        input[type="range"]::-ms-fill-upper {
+          background: #e5e7eb;
+          border-radius: 9999px;
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
@@ -341,131 +383,100 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Planes a medida</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Elige el plan que mejor se adapte a las necesidades de tu empresa</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Plan Básico -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Básico</h3>
-                        <p class="text-gray-600 mb-6">Perfecto para PYMES que inician su transformación digital</p>
-                        <div class="mb-6">
-                            <span class="text-4xl font-bold text-gray-800">$299</span>
-                            <span class="text-gray-600">/mes</span>
-                        </div>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Hasta 50 solicitudes/mes</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Comparación de hasta 5 proveedores</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Dashboard básico</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Soporte por correo electrónico</span>
-                            </li>
-                        </ul>
-                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gray-100 text-gray-800 font-semibold rounded-lg hover:bg-gray-200 transition">Empezar</a>
-                    </div>
-                </div>
-                
-                <!-- Plan Profesional (Destacado) -->
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform scale-105 z-10 border-2 border-indigo-500">
-                    <div class="bg-indigo-500 text-white text-center py-2">
-                        <span class="font-semibold">Más popular</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Profesional</h3>
-                        <p class="text-gray-600 mb-6">Para empresas con mayor volumen de compras</p>
-                        <div class="mb-6">
-                            <span class="text-4xl font-bold text-gray-800">$799</span>
-                            <span class="text-gray-600">/mes</span>
-                        </div>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Hasta 200 solicitudes/mes</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Comparación de hasta 15 proveedores</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Dashboard avanzado con analíticas</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Integración con 1 sistema ERP</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Soporte prioritario</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Negociación asistida por IA</span>
-                            </li>
-                        </ul>
-                        <a href="#contact" class="block w-full py-3 px-6 text-center gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition">Prueba gratis 14 días</a>
-                    </div>
-                </div>
-                
-                <!-- Plan Empresa -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Empresa</h3>
-                        <p class="text-gray-600 mb-6">Solución completa para grandes corporaciones</p>
-                        <div class="mb-6">
-                            <span class="text-4xl font-bold text-gray-800">Personalizado</span>
-                        </div>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Solicitudes ilimitadas</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Comparación de proveedores ilimitada</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Dashboard ejecutivo personalizado</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Múltiples integraciones ERP</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Soporte 24/7 con gestor dedicado</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Entrenamiento personalizado</span>
-                            </li>
-                        </ul>
-                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gray-100 text-gray-800 font-semibold rounded-lg hover:bg-gray-200 transition">Contactar ventas</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center text-gray-600">
-                <p>¿Necesitas algo diferente? <a href="#contact" class="text-indigo-600 hover:underline">Hablemos</a> sobre una solución personalizada para tu empresa.</p>
-            </div>
+    <!-- Savings Calculator Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Calculá tu ahorro con Atajo</h2>
+          <p class="text-xl text-gray-600">Estimá cuánto tiempo y dinero podés ahorrar automatizando tus compras.</p>
         </div>
+
+        <div class="max-w-2xl mx-auto mb-10">
+          <label for="purchaseAmount" class="block text-lg font-semibold text-gray-700 mb-2">¿Cuánto comprás por mes?</label>
+          <input
+            type="range"
+            id="purchaseAmount"
+            name="purchaseAmount"
+            min="10000"
+            max="2000000"
+            step="10000"
+            value="10000"
+            class="mt-2"
+          />
+          <div class="text-center text-indigo-600 font-semibold mt-2 text-lg">$<span id="purchaseValue">10000</span> USD</div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-6">
+          <button onclick="showTab('resumen')" id="btnResumen" class="px-4 py-2 border rounded-l-lg font-semibold bg-white text-gray-800 hover:bg-indigo-100">Comparación</button>
+          <button onclick="showTab('detalle')" id="btnDetalle" class="px-4 py-2 border-t border-b border-r font-semibold bg-gray-100 text-gray-600 hover:bg-indigo-100">Ahorro en horas</button>
+          <button onclick="showTab('ahorros-compras')" id="btnAhorrosCompras" class="px-4 py-2 border-t border-b border-r rounded-r-lg font-semibold bg-gray-100 text-gray-600 hover:bg-indigo-100">Ahorro en $</button>
+        </div>
+
+        <!-- Resumen -->
+        <div id="tabResumen" class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="text-gray-800 text-xl font-extrabold mb-2">Método tradicional</div>
+            <div class="text-3xl font-bold text-gray-800 mb-2"><span id="traditionalTime">10</span> h / mes</div>
+            <div class="text-sm text-gray-500">Costo total estimado</div>
+            <div class="text-xl font-semibold text-gray-700 mb-4"><span id="traditionalCost">$10,000</span></div>
+            <ul class="text-sm text-gray-500 list-disc list-inside space-y-1">
+              <li>Relevamiento manual de precios</li>
+              <li>Comparación en Excel o papel</li>
+              <li>Envío de órdenes por correo</li>
+              <li>Seguimiento y carga manual</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-8 border border-green-100">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-gray-800 text-xl font-extrabold mb-2">Con Atajo</div>
+              <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">IA Activa</span>
+            </div>
+            <div class="text-3xl font-bold text-green-600 mb-2"><span id="atajoTime">3</span> h / mes</div>
+            <div class="text-sm text-gray-500">Costo total estimado</div>
+            <div class="text-xl font-semibold text-green-600 mb-4"><span id="atajoCost">$9,850</span></div>
+            <ul class="text-sm text-gray-500 list-disc list-inside space-y-1">
+              <li>Cotización automática con IA</li>
+              <li>Comparativa inteligente entre proveedores</li>
+              <li>Órdenes generadas automáticamente</li>
+              <li>Seguimiento centralizado y reportes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Detalle -->
+        <div id="tabDetalle" class="max-w-3xl mx-auto hidden">
+          <table class="w-full mt-4 border rounded-lg overflow-hidden" id="ahorro-tiempo-table">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">Actividad</th>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">Sin Atajo</th>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">Con Atajo</th>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">Ahorro</th>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">($)</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-800" id="detalleTable">
+              <!-- dinámico -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ahorros en compras -->
+        <div id="ahorros-compras-tab" class="max-w-2xl mx-auto hidden">
+          <table class="w-full mt-4 border rounded-lg overflow-hidden" id="ahorros-compras-table">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">Origen del ahorro</th>
+                <th class="px-4 py-2 border text-sm font-semibold text-gray-600 bg-gray-50 text-center">Monto estimado ($)</th>
+              </tr>
+            </thead>
+            <tbody id="ahorrosComprasTable" class="text-gray-800">
+              <!-- dinámico -->
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- Contact/Lead Capture Section -->
@@ -732,6 +743,142 @@
     </footer>
 
     <script>
+      const purchaseSlider = document.getElementById("purchaseAmount");
+      const purchaseValue = document.getElementById('purchaseValue');
+      const traditionalTime = document.getElementById('traditionalTime');
+      const atajoTime = document.getElementById('atajoTime');
+      const timeSaved = document.getElementById('timeSaved');
+      const traditionalCost = document.getElementById('traditionalCost');
+      const moneySaved = document.getElementById('moneySaved');
+      const atajoCost = document.getElementById('atajoCost');
+      const detalleTable = document.getElementById('detalleTable');
+
+      function updateSliderBackground() {
+        const percent = (purchaseSlider.value - purchaseSlider.min) / (purchaseSlider.max - purchaseSlider.min) * 100;
+        purchaseSlider.style.setProperty('--value', `${percent}%`);
+      }
+
+      function updateCalculator() {
+        const amount = parseInt(purchaseSlider.value);
+        purchaseValue.textContent = amount.toLocaleString();
+        traditionalCost.textContent = `$${amount.toLocaleString()}`;
+
+        let traditionalHrs = Math.round(100 * Math.log10(amount / 10000 + 1));
+        const atajoHrs = Math.round(traditionalHrs * 0.7);
+        const hrsSaved = traditionalHrs - atajoHrs;
+        const moneySavedAmt = Math.round(amount * 0.015);
+
+        traditionalTime.textContent = traditionalHrs;
+        atajoTime.textContent = atajoHrs;
+        if (timeSaved) timeSaved.textContent = hrsSaved;
+        if (document.getElementById("moneySaved")) document.getElementById("moneySaved").textContent = `$${moneySavedAmt.toLocaleString()}`;
+        if (document.getElementById("atajoCost")) document.getElementById("atajoCost").textContent = `$${(amount - moneySavedAmt).toLocaleString()}`;
+
+        // Actividades con ratios recalculados (sin "Carga manual de datos")
+        // El 20% que tenía el ítem eliminado se distribuye proporcionalmente
+        // Los nuevos ratios suman 1
+        const actividades = [
+          { nombre: 'Relevamiento de precios', ratio: 0.4 / 0.8 },
+          { nombre: 'Comparación de cotizaciones', ratio: 0.25 / 0.8 },
+          { nombre: 'Envío y seguimiento de OC', ratio: 0.15 / 0.8 }
+        ];
+
+        if (detalleTable) {
+          detalleTable.innerHTML = '';
+          let totalSin = 0, totalCon = 0, totalAhorroUSD = 0;
+          actividades.forEach(a => {
+            const sin = a.ratio * traditionalHrs;
+            const con = sin * 0.7;
+            const ahorro = sin - con;
+            const ahorroTiempoEnDolares = Math.round(ahorro * 10);
+            totalSin += sin;
+            totalCon += con;
+            totalAhorroUSD += ahorroTiempoEnDolares;
+            detalleTable.innerHTML += `
+              <tr class="border-t">
+                <td class="px-4 py-2 border text-sm text-gray-700 text-center">${a.nombre}</td>
+                <td class="px-4 py-2 border text-sm text-gray-700 text-center">${sin.toFixed(1)} h</td>
+                <td class="px-4 py-2 border text-sm text-gray-700 text-center">${con.toFixed(1)} h</td>
+                <td class="px-4 py-2 border text-sm text-green-600 font-medium text-center">${ahorro.toFixed(1)} h</td>
+                <td class="px-4 py-2 border text-sm text-blue-600 font-medium text-center">$${ahorroTiempoEnDolares}</td>
+              </tr>`;
+          });
+
+          const ahorroTotal = totalSin - totalCon;
+          const ahorroPorcentaje = totalSin > 0 ? Math.round((ahorroTotal / totalSin) * 100) : 0;
+          detalleTable.innerHTML += `
+            <tr class="font-bold border-t bg-gray-50">
+              <td class="px-4 py-2 border text-sm font-bold text-gray-800 text-right">Total</td>
+              <td class="px-4 py-2 border text-sm font-bold text-gray-800 text-center">${totalSin.toFixed(1)} h</td>
+              <td class="px-4 py-2 border text-sm font-bold text-gray-800 text-center">${totalCon.toFixed(1)} h</td>
+              <td class="px-4 py-2 border text-sm font-bold text-green-700 text-center">${ahorroTotal.toFixed(1)} h (${ahorroPorcentaje}%)</td>
+              <td class="px-4 py-2 border text-sm font-bold text-blue-700 text-center">$${totalAhorroUSD}</td>
+            </tr>`;
+        }
+
+        // --- AHORROS EN COMPRAS ---
+        // Calcular el total de ahorro monetario (1.5% del monto)
+        const ahorroDineroTotal = amount * 0.015;
+        // Desglose de ahorro
+        const desgloseAhorroDinero = [
+          { origen: 'Comparación de precios automatizada', ratio: 0.4 },
+          { origen: 'Negociación automática con proveedores', ratio: 0.35 },
+          { origen: 'Descubrimiento de proveedores competitivos', ratio: 0.25 }
+        ];
+        const ahorrosComprasTable = document.getElementById('ahorrosComprasTable');
+        if (ahorrosComprasTable) {
+          ahorrosComprasTable.innerHTML = '';
+          desgloseAhorroDinero.forEach(a => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+              <td class="px-4 py-2 border text-sm text-gray-700 text-center">${a.origen}</td>
+              <td class="px-4 py-2 border text-sm text-green-600 font-medium text-center">$${Math.round(a.ratio * ahorroDineroTotal)}</td>
+            `;
+            ahorrosComprasTable.appendChild(fila);
+          });
+          // Agregar fila de total estimado
+          const totalAhorro = Math.round(ahorroDineroTotal);
+          const totalRow = document.createElement('tr');
+          totalRow.innerHTML = `
+            <td class="px-4 py-2 border text-sm font-bold text-gray-800 text-right">Total estimado</td>
+            <td class="px-4 py-2 border text-sm font-bold text-green-700 text-center">$${totalAhorro.toLocaleString()}</td>
+          `;
+          ahorrosComprasTable.appendChild(totalRow);
+        }
+      }
+
+      function showTab(tab) {
+        // Oculta todos los tabs
+        document.getElementById('tabResumen').classList.add('hidden');
+        document.getElementById('tabDetalle').classList.add('hidden');
+        if (document.getElementById('ahorros-compras-tab')) document.getElementById('ahorros-compras-tab').classList.add('hidden');
+        // Quita estilos activos de todos los botones
+        document.getElementById('btnResumen').classList.remove('bg-white', 'text-gray-800');
+        document.getElementById('btnDetalle').classList.remove('bg-white', 'text-gray-800');
+        if (document.getElementById('btnAhorrosCompras')) document.getElementById('btnAhorrosCompras').classList.remove('bg-white', 'text-gray-800');
+        document.getElementById('btnResumen').classList.add('bg-gray-100', 'text-gray-600');
+        document.getElementById('btnDetalle').classList.add('bg-gray-100', 'text-gray-600');
+        if (document.getElementById('btnAhorrosCompras')) document.getElementById('btnAhorrosCompras').classList.add('bg-gray-100', 'text-gray-600');
+        // Muestra el tab correspondiente y activa el botón
+        if (tab === 'resumen') {
+          document.getElementById('tabResumen').classList.remove('hidden');
+          document.getElementById('btnResumen').classList.add('bg-white', 'text-gray-800');
+        } else if (tab === 'detalle') {
+          document.getElementById('tabDetalle').classList.remove('hidden');
+          document.getElementById('btnDetalle').classList.add('bg-white', 'text-gray-800');
+        } else if (tab === 'ahorros-compras') {
+          if (document.getElementById('ahorros-compras-tab')) document.getElementById('ahorros-compras-tab').classList.remove('hidden');
+          if (document.getElementById('btnAhorrosCompras')) document.getElementById('btnAhorrosCompras').classList.add('bg-white', 'text-gray-800');
+        }
+      }
+
+      purchaseSlider.addEventListener('input', () => {
+        updateSliderBackground();
+        updateCalculator();
+      });
+      updateSliderBackground();
+      updateCalculator();
+      showTab('resumen');
         // FAQ Toggle
         document.querySelectorAll('.faq-toggle').forEach(button => {
             button.addEventListener('click', () => {
@@ -743,7 +890,18 @@
                 icon.classList.toggle('fa-chevron-up');
             });
         });
-        
+
+        // Cotizador demo (ejemplo de lógica)
+        // Suponiendo que hay algún lugar donde calculas ahorro y tiempo
+        // Ejemplo de función (ajusta según tu implementación real)
+        function calcularAhorroYTiempo(amount, traditionalHrs) {
+            // El tiempo con Atajo es el 70% del tiempo tradicional
+            const atajoHrs = Math.round(traditionalHrs * 0.7);
+            // El ahorro de dinero es el 1.5% del monto total
+            const moneySavedAmt = Math.round(amount * 0.015);
+            return { atajoHrs, moneySavedAmt };
+        }
+
         // Form Submission
         const leadForm = document.getElementById('leadForm');
         const successMessage = document.getElementById('successMessage');
